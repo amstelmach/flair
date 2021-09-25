@@ -15,6 +15,7 @@ const Pricing = ({headerText, descriptionText, value, duration, text}) => {
                     <Text>{text}</Text>
                 </Info>
             </PriceContainer>
+            <Line></Line>
         </PricingComponent>
     )
 };
@@ -59,6 +60,7 @@ padding-left: 42px;
 const PriceContainer = styled.div`
 display: flex;
 align-items: center;
+padding-bottom: 40px;
 `;
 
 const Value = styled.span`
@@ -97,6 +99,13 @@ const Text = styled.span`
 font-size: 15px;
 color: #7A7E92;
 font-weight: 400;
+`;
+
+const Line = styled.div`
+height: 1px;
+width: 298px;
+background-color: #CFD1E3BF;
+align-self: center;
 `;
 
 
