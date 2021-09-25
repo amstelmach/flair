@@ -2,11 +2,19 @@
 import styled from "styled-components";
 
 
-const Pricing = ({headerText, descriptionText}) => {
+const Pricing = ({headerText, descriptionText, value, duration, text}) => {
     return (
         <PricingComponent>
             <Header>{headerText}</Header>
             <Description>{descriptionText}</Description>
+            <PriceContainer>
+                <Value>{value}</Value>
+                <ForwardSlash></ForwardSlash>
+                <Info>
+                    <Duration>{duration}</Duration>
+                    <Text>{text}</Text>
+                </Info>
+            </PriceContainer>
         </PricingComponent>
     )
 };
@@ -46,6 +54,49 @@ line-height: 28px;
 color: #7a7e92;
 padding-left: 42px;
 
+`;
+
+const PriceContainer = styled.div`
+display: flex;
+align-items: center;
+`;
+
+const Value = styled.span`
+font-size: 45px;
+line-height: 54.5px;
+font-weight: 700;
+color: #1f2643;
+padding-left: 42px;
+`;
+
+const ForwardSlash = styled.div`
+width: 6px;
+height: 48.59px;
+background-color: #f2f3f8;
+border-radius: 100px;
+transform: rotate(20deg);
+margin: 0 20px;
+
+`;
+
+const Info = styled.div`
+display: flex;
+flex-direction: column;
+font-size: 15px;
+line-height: 20px;
+color: #7a7e92;
+`;
+
+const Duration = styled.span`
+font-size: 15px;
+color: #7A7E92;
+font-weight: 400;
+`;
+
+const Text = styled.span`
+font-size: 15px;
+color: #7A7E92;
+font-weight: 400;
 `;
 
 
