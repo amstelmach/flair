@@ -2,10 +2,11 @@
 import styled from "styled-components";
 
 
-const Pricing = ({headerText}) => {
+const Pricing = ({headerText, descriptionText}) => {
     return (
         <PricingComponent>
             <Header>{headerText}</Header>
+            <Description>{descriptionText}</Description>
         </PricingComponent>
     )
 };
@@ -36,6 +37,16 @@ padding-top: 24px;
 padding-left: 42px;
 `;
 
+const Description = styled.div`
+width: 300px;
+height: 150px;
+margin-bottom: 30px;
+font-size: 15px;
+line-height: 28px;
+color: #7a7e92;
+padding-left: 42px;
+
+`;
 
 
 
