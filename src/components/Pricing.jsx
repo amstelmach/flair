@@ -2,10 +2,10 @@
 import styled from "styled-components";
 
 
-const Pricing = () => {
+const Pricing = ({headerText}) => {
     return (
         <PricingComponent>
-
+            <Header>{headerText}</Header>
         </PricingComponent>
     )
 };
@@ -25,6 +25,18 @@ transition: 0.3s ease-in-out;
     box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.2);
 }
 `;
+
+
+const Header = styled.header`
+font-size: 26px;
+line-height: 45px;
+font-weight: 600;
+margin-bottom: 28.5px;
+padding-top: 24px;
+padding-left: 42px;
+`;
+
+
 
 
 export default Pricing;
