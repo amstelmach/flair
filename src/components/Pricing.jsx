@@ -122,7 +122,8 @@ display: flex;
 justify-content: center;
 font-weight: 500;
 margin-left: 42px;
-margin-bottom: 44.44.px;
+margin-bottom: 44.44px;
+cursor: pointer;
 `;
 
 
