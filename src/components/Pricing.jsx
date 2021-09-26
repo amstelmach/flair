@@ -2,7 +2,9 @@
 import styled from "styled-components";
 
 
-const Pricing = ({headerText, descriptionText, value, duration, text, buttonText, list}) => {
+
+const Pricing = ({headerText, descriptionText, value, duration, text, buttonText, list, img}) => {
+    
     return (
         <PricingComponent>
             <Header>{headerText}</Header>
@@ -19,13 +21,18 @@ const Pricing = ({headerText, descriptionText, value, duration, text, buttonText
             <ListContainerChecked>
                 {list.map((listItem, index) => {
                     return (
+                        
                         <ListItemCheckedElement key={index}>
+                            <img src={"images/Oval.jpg"} />
                             {listItem}
+                            
                         </ListItemCheckedElement>
                     )
+                
                 }
                 )}
             </ListContainerChecked>
+            
             <Button>{buttonText}</Button>
 
         </PricingComponent>
@@ -129,7 +136,10 @@ flex-direction: column;
 const ListItemCheckedElement = styled.span`
 font-size: 15px;
 
+
 `;
+
+
 
 
 
