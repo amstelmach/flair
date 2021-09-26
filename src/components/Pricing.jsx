@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 
-const Pricing = ({headerText, descriptionText, value, duration, text, buttonText}) => {
+const Pricing = ({headerText, descriptionText, value, duration, text, buttonText, list}) => {
     return (
         <PricingComponent>
             <Header>{headerText}</Header>
@@ -16,7 +16,18 @@ const Pricing = ({headerText, descriptionText, value, duration, text, buttonText
                 </Info>
             </PriceContainer>
             <Line></Line>
+            <ListContainerChecked>
+                {list.map((listItem, index) => {
+                    return (
+                        <ListItemCheckedElement key={index}>
+                            {listItem}
+                        </ListItemCheckedElement>
+                    )
+                }
+                )}
+            </ListContainerChecked>
             <Button>{buttonText}</Button>
+
         </PricingComponent>
     )
 };
@@ -30,7 +41,7 @@ height: max-content;
 background-color: #ffffff;
 display: flex;
 flex-direction: column;
-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+box-shadow: 0px 3px 15px rgba(199, 164, 164, 0.2);
 transition: 0.3s ease-in-out;
 &:hover {
     box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.2);
@@ -108,6 +119,20 @@ width: 298px;
 background-color: #CFD1E3BF;
 align-self: center;
 `;
+
+const ListContainerChecked = styled.div`
+display: flex;
+flex-direction: column;
+
+`;
+
+const ListItemCheckedElement = styled.span`
+font-size: 15px;
+
+`;
+
+
+
 
 
 const Button = styled.div`
