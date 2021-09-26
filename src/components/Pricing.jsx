@@ -42,7 +42,7 @@ const Pricing = ({headerText, descriptionText, value, duration, text, buttonText
 
 const PricingComponent = styled.div`
 width: 389px;
-min-height: 690px;
+min-height: 650px;
 border-radius: 5px;
 height: max-content;
 background-color: #ffffff;
@@ -60,15 +60,15 @@ const Header = styled.header`
 font-size: 26px;
 line-height: 45px;
 font-weight: 600;
-margin-bottom: 28.5px;
-padding-top: 24px;
+margin-bottom: 10px;
+padding-top: 20px;
 padding-left: 42px;
 `;
 
 const Description = styled.div`
 width: 300px;
 height: 150px;
-margin-bottom: 30px;
+margin-bottom: 15px;
 font-size: 15px;
 line-height: 28px;
 color: #7a7e92;
@@ -131,43 +131,18 @@ const ListContainerChecked = styled.div`
 display: flex;
 flex-direction: column;
 padding-left: 42px;
-padding-top: 40px;
-padding-bottom: 60px;
-/* align-items: baseline; */
-/* justify-content: center; */
-/* justify-self: stretch; */
-/* justify-self: baseline; */
+padding-top: 35px;
+padding-bottom: 50px;
+padding-right: 42px;
 align-content: center;
-
 `;
 
 const ListItemCheckedElement = styled.span`
 font-size: 15px;
 display: flex;
 align-items: center;
-/* margin-left: 12px; */
 margin-top: 12px;
-/* justify-self: center; */
-/* align-items: center; */
-/* line-height: 28px; */
-/* justify-self: baseline; */
-/* justify-self: stretch; */
-/* align-content: center; */
-/* align-content: baseline; */
-/* align-content: center; */
-/* justify-items: center; */
-
-
-
-
-
-
 `;
-
-
-
-
-
 
 
 const Button = styled.div`
