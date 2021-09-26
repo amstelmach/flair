@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 
 
-const Pricing = ({headerText, descriptionText, value, duration, text, buttonText, list, img}) => {
+const Pricing = ({headerText, descriptionText, value, duration, text, buttonText, list, info}) => {
+    
     
     return (
         <PricingComponent>
@@ -21,20 +22,28 @@ const Pricing = ({headerText, descriptionText, value, duration, text, buttonText
             <ListContainerChecked>
                 {list.map((listItem, index) => {
                     return (
-                        
                         <ListItemCheckedElement key={index}>
                             <img src={"images/Oval.jpg"} style={{marginRight: '12px'}} />
-                            {listItem}
-                            
+                            {listItem} 
                         </ListItemCheckedElement>
                     )
-                
                 }
                 )}
             </ListContainerChecked>
+
+            <ListContainerInfo>
+                {info.map((infoItem, index) => {
+                    return (
+                        <ListItemInfoElement key={index}>
+                            <img src={"images/Info.jpg"} />
+                            {infoItem} 
+                        </ListItemInfoElement>
+                    )
+                }
+                )}
+            </ListContainerInfo>
             
             <Button>{buttonText}</Button>
-
         </PricingComponent>
     )
 };
@@ -42,7 +51,7 @@ const Pricing = ({headerText, descriptionText, value, duration, text, buttonText
 
 const PricingComponent = styled.div`
 width: 389px;
-min-height: 650px;
+min-height: 620px;
 border-radius: 5px;
 height: max-content;
 background-color: #ffffff;
@@ -125,16 +134,18 @@ height: 1px;
 width: 298px;
 background-color: #CFD1E3BF;
 align-self: center;
+margin-bottom: 30px;
 `;
 
 const ListContainerChecked = styled.div`
 display: flex;
 flex-direction: column;
 padding-left: 42px;
-padding-top: 35px;
-padding-bottom: 50px;
+/* padding-top: 35px; */
+/* padding-bottom: 50px; */
 padding-right: 42px;
 align-content: center;
+min-height: 0px;
 `;
 
 const ListItemCheckedElement = styled.span`
@@ -142,6 +153,26 @@ font-size: 15px;
 display: flex;
 align-items: center;
 margin-top: 12px;
+`;
+
+const ListContainerInfo = styled.div`
+display: flex;
+flex-direction: column;
+min-height: 0px;
+padding-left: 42px;
+/* padding-top: 35px; */
+/* padding-bottom: 50px; */
+padding-right: 42px;
+align-content: center;
+`;
+
+const ListItemInfoElement = styled.span`
+font-size: 15px;
+display: flex;
+flex-direction: row-reverse;
+align-items: center;
+margin-top: 12px;
+justify-content: space-between;
 `;
 
 
@@ -157,7 +188,9 @@ display: flex;
 justify-content: center;
 font-weight: 500;
 margin-left: 42px;
-margin-bottom: 44.44px;
+margin-top: 30px;
+margin-bottom: 30px;
+/* margin-bottom: 44.4px; */
 cursor: pointer;
 `;
 
