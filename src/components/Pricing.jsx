@@ -23,7 +23,7 @@ const Pricing = ({headerText, descriptionText, value, duration, text, buttonText
                     return (
                         
                         <ListItemCheckedElement key={index}>
-                            <img src={"images/Oval.jpg"} />
+                            <img src={"images/Oval.jpg"} style={{marginRight: '12px'}} />
                             {listItem}
                             
                         </ListItemCheckedElement>
@@ -130,11 +130,21 @@ align-self: center;
 const ListContainerChecked = styled.div`
 display: flex;
 flex-direction: column;
+padding-left: 42px;
+padding-top: 40px;
+padding-bottom: 60px;
+
 
 `;
 
 const ListItemCheckedElement = styled.span`
 font-size: 15px;
+/* margin-left: 12px; */
+margin-top: 12px;
+line-height: 28px;
+justify-self: center;
+
+
 
 
 `;
