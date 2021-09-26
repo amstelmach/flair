@@ -133,16 +133,31 @@ flex-direction: column;
 padding-left: 42px;
 padding-top: 40px;
 padding-bottom: 60px;
-
+/* align-items: baseline; */
+/* justify-content: center; */
+/* justify-self: stretch; */
+/* justify-self: baseline; */
+align-content: center;
 
 `;
 
 const ListItemCheckedElement = styled.span`
 font-size: 15px;
+display: flex;
+align-items: center;
 /* margin-left: 12px; */
 margin-top: 12px;
-line-height: 28px;
-justify-self: center;
+/* justify-self: center; */
+/* align-items: center; */
+/* line-height: 28px; */
+/* justify-self: baseline; */
+/* justify-self: stretch; */
+/* align-content: center; */
+/* align-content: baseline; */
+/* align-content: center; */
+/* justify-items: center; */
+
+
 
 
 
