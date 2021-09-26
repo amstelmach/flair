@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 
-const Pricing = ({headerText, descriptionText, value, duration, text}) => {
+const Pricing = ({headerText, descriptionText, value, duration, text, buttonText}) => {
     return (
         <PricingComponent>
             <Header>{headerText}</Header>
@@ -16,6 +16,7 @@ const Pricing = ({headerText, descriptionText, value, duration, text}) => {
                 </Info>
             </PriceContainer>
             <Line></Line>
+            <Button>{buttonText}</Button>
         </PricingComponent>
     )
 };
@@ -106,6 +107,22 @@ height: 1px;
 width: 298px;
 background-color: #CFD1E3BF;
 align-self: center;
+`;
+
+
+const Button = styled.div`
+width: 297.68px;
+height: 43.56px;
+background-color: #1388c9;
+border-radius: 97px;
+color: #ffffff;
+font-size: 16px;
+line-height: 43.56px;
+display: flex;
+justify-content: center;
+font-weight: 500;
+margin-left: 42px;
+margin-bottom: 44.44.px;
 `;
 
 
