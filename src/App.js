@@ -1,24 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import Pricing from "./components/Pricing";
+// import "./App.css";
+
+const PricingContainer = styled.div`
+  height: 100vh;
+  width: 100%;
+  background-color: #e5e5e5;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PricingContainer>
+      <Pricing
+        headerText="Essential"
+        descriptionText="Understand the true pulse of your organization with regular Check-ins and guided 1-on-1s, and show meaningful appreciation when it matters most using High Fives."
+        value="8€"
+        duration="per month"
+        text="per employee"
+        buttonText="Select Plan"
+        list={["Core HR", "Payroll", "Recruiting", "Employee HUB"]}
+        info={[]}
+      />
+      <Pricing
+        headerText="Growth"
+        descriptionText="Understand the true pulse of your organization with regular Check-ins and guided 1-on-1s, and show meaningful appreciation when it matters most using High Fives."
+        value="14€"
+        duration="per month"
+        text="per employee"
+        buttonText="Select Plan"
+        info={[
+          "Core HR",
+          "Payroll",
+          "Recruiting",
+          "Employee HUB",
+          "Performance management",
+          "Shift planning",
+        ]}
+        list={[]}
+      />
+      <Pricing
+        headerText="Performance"
+        descriptionText="Understand the true pulse of your organization with regular Check-ins and guided 1-on-1s, and show meaningful appreciation when it matters most using High Fives."
+        value="20€"
+        duration="per month"
+        text="per employee"
+        buttonText="Select Plan"
+        info={[
+          "Core HR",
+          "Payroll",
+          "Recruiting",
+          "Employee HUB",
+          "Performance management",
+          "Shift planning",
+          "Componsation management",
+        ]}
+        list={[]}
+      />
+    </PricingContainer>
   );
 }
 
