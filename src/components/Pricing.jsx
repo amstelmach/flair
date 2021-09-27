@@ -212,6 +212,9 @@ margin-top: 30px;
 margin-bottom: 30px;
 /* margin-bottom: 44.4px; */
 cursor: pointer;
+&:hover {
+    background: linear-gradient(90deg, #0162c8, #55e7fc);
+}
 `;
 
 
