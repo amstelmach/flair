@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Pricing from "./components/Pricing";
 // import "./App.css";
+import PageHeader from "./components/PageHeader";
 
 const PricingContainer = styled.div`
   height: 100vh;
@@ -9,18 +10,20 @@ const PricingContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+  gap: 2px;
 `;
 
-const PageHeader = styled.div`
-  width: 100%;
-  height: 200px;
-  background-color: red;
-`;
+// const PageHeaderA = styled.div`
+//   width: 100%;
+//   height: 200px;
+//   background-color: red;
+// `;
 
 function App() {
   return (
     <>
-      <PageHeader />
+      {/* <PageHeaderA /> */}
+      <PageHeader pageTitle="Base plan" />
 
       <PricingContainer>
         <Pricing
