@@ -6,7 +6,12 @@ import PageHeader from "./components/PageHeader";
 const PricingContainer = styled.div`
   height: 100vh;
   width: 80%;
-  background-color: #e5e5e5;
+  background: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 0.056) 0%,
+    rgba(37, 67, 136, 0.1) 42.16%,
+    rgba(107, 180, 221, 0) 92.38%
+  );
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
