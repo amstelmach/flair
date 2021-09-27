@@ -1,10 +1,18 @@
-
+import React, { useState } from "react";
 import styled from "styled-components";
+import ReactHover, { Trigger, Hover} from 'react-hover';
+import TriggerComponent from "./TriggerComponent";
+import HoverComponent from "./HoverComponent";
 
+
+const OptionsCursorTrueWithMargins = {
+    followCursor: false,
+    shiftX: -400,
+    shiftY: 20
+}
 
 
 const Pricing = ({headerText, descriptionText, value, duration, text, buttonText, list, info}) => {
-    
     
     return (
         <PricingComponent>
@@ -34,14 +42,24 @@ const Pricing = ({headerText, descriptionText, value, duration, text, buttonText
             <ListContainerInfo>
                 {info.map((infoItem, index) => {
                     return (
-                        <ListItemInfoElement key={index}>
-                            <img src={"images/Info.jpg"} />
+                        <ListItemInfoElement key={index} >
+                            
+                            <ReactHover options={OptionsCursorTrueWithMargins}>
+                                <Trigger type="trigger">
+                                    <TriggerComponent />
+                                </Trigger>
+                                <Hover type="hover">
+                                    <HoverComponent />
+                                </Hover>
+                            </ReactHover>
+                            {/* <img src={"images/Info.jpg"} /> */}
                             {infoItem} 
                         </ListItemInfoElement>
                     )
                 }
                 )}
             </ListContainerInfo>
+            
             
             <Button>{buttonText}</Button>
         </PricingComponent>
@@ -64,7 +82,6 @@ transition: 0.3s ease-in-out;
 }
 `;
 
-
 const Header = styled.header`
 font-size: 26px;
 line-height: 45px;
@@ -82,7 +99,6 @@ font-size: 15px;
 line-height: 28px;
 color: #7a7e92;
 padding-left: 42px;
-
 `;
 
 const PriceContainer = styled.div`
@@ -106,7 +122,6 @@ background-color: #f2f3f8;
 border-radius: 100px;
 transform: rotate(20deg);
 margin: 0 20px;
-
 `;
 
 const Info = styled.div`
@@ -174,7 +189,6 @@ align-items: center;
 margin-top: 12px;
 justify-content: space-between;
 `;
-
 
 const Button = styled.div`
 width: 297.68px;
