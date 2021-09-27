@@ -5,9 +5,9 @@ import TriggerComponent from "./TriggerComponent";
 import HoverComponent from "./HoverComponent";
 
 
-const OptionsCursorTrueWithMargins = {
-    followCursor: false,
-    shiftX: -400,
+const Display = {
+    followCursor: true,
+    shiftX: -205,
     shiftY: 20
 }
 
@@ -39,27 +39,27 @@ const Pricing = ({headerText, descriptionText, value, duration, text, buttonText
                 )}
             </ListContainerChecked>
 
+            <ListContainerInfo>
                 {info.map((infoItem, index) => {
                     return (
-                        <ListContainerInfo>
-
-                            <ListItemInfoElement key={index} >
-                                <ReactHover options={OptionsCursorTrueWithMargins}>
+                        <ListItemInfoElement key={index} >
+                                <ReactHover options={Display}>
                                     <Trigger type="trigger">
-                                        <TriggerComponent />
+                                        <TriggerComponent/>
+                                        
                                     </Trigger>
                                     <Hover type="hover">
                                         <HoverComponent />
                                     </Hover>
                                 </ReactHover>
-                                {/* <img src={"images/Info.jpg"} /> */}
-                            </ListItemInfoElement>
                                 {infoItem} 
-                        </ListContainerInfo>
-                    )
-                }
-                )}
+                                
+                            </ListItemInfoElement>
+                                )
+                            }
             
+                            )}
+            </ListContainerInfo>
             
             <Button>{buttonText}</Button>
         </PricingComponent>
