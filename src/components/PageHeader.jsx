@@ -22,11 +22,17 @@ export default PageHeader;
 const PageHeaderComponent = styled.div`
 width: 100%;
 height: 200px;
-background-color: #E5E5E5;
+background: linear-gradient(
+    360deg,
+    rgba(255, 255, 255, 0.056) 0%,
+    rgba(37, 67, 136, 0.1) 42.16%,
+    rgba(107, 180, 221, 0) 92.38%
+  );
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+
 `;
 
 const Title = styled.div`
@@ -54,7 +60,7 @@ margin-right: 10px;
 const SmallForwardSlash = styled.div`
 width: 3.52px;
 height: 28.51px;
-background-color: #EEF0F6;
+background-color: #ced1d9;
 border-radius: 100px;
 transform: rotate(20deg);
 /* margin: 0 20px; */
