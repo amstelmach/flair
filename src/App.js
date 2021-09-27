@@ -5,12 +5,12 @@ import PageHeader from "./components/PageHeader";
 
 const PricingContainer = styled.div`
   height: 100vh;
-  width: 100%;
+  width: 80%;
   background-color: #e5e5e5;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
-  gap: 2px;
+  margin: 0 auto 200px;
 `;
 
 // const PageHeaderA = styled.div`
