@@ -7,7 +7,7 @@ import HoverComponent from "./HoverComponent";
 
 const Display = {
     followCursor: true,
-    shiftX: -205,
+    shiftX: -340,
     shiftY: 20
 }
 
