@@ -39,26 +39,26 @@ const Pricing = ({headerText, descriptionText, value, duration, text, buttonText
                 )}
             </ListContainerChecked>
 
-            <ListContainerInfo>
                 {info.map((infoItem, index) => {
                     return (
-                        <ListItemInfoElement key={index} >
-                            
-                            <ReactHover options={OptionsCursorTrueWithMargins}>
-                                <Trigger type="trigger">
-                                    <TriggerComponent />
-                                </Trigger>
-                                <Hover type="hover">
-                                    <HoverComponent />
-                                </Hover>
-                            </ReactHover>
-                            {/* <img src={"images/Info.jpg"} /> */}
-                            {infoItem} 
-                        </ListItemInfoElement>
+                        <ListContainerInfo>
+
+                            <ListItemInfoElement key={index} >
+                                <ReactHover options={OptionsCursorTrueWithMargins}>
+                                    <Trigger type="trigger">
+                                        <TriggerComponent />
+                                    </Trigger>
+                                    <Hover type="hover">
+                                        <HoverComponent />
+                                    </Hover>
+                                </ReactHover>
+                                {/* <img src={"images/Info.jpg"} /> */}
+                            </ListItemInfoElement>
+                                {infoItem} 
+                        </ListContainerInfo>
                     )
                 }
                 )}
-            </ListContainerInfo>
             
             
             <Button>{buttonText}</Button>
@@ -161,6 +161,8 @@ padding-left: 42px;
 padding-right: 42px;
 align-content: center;
 min-height: 0px;
+color:#1F2643;
+
 `;
 
 const ListItemCheckedElement = styled.span`
@@ -179,6 +181,9 @@ padding-left: 42px;
 /* padding-bottom: 50px; */
 padding-right: 42px;
 align-content: center;
+color: #1F2643;
+font-size: 15px;
+
 `;
 
 const ListItemInfoElement = styled.span`
@@ -188,6 +193,7 @@ flex-direction: row-reverse;
 align-items: center;
 margin-top: 12px;
 justify-content: space-between;
+width: 280px;
 `;
 
 const Button = styled.div`
