@@ -14,7 +14,7 @@ const PricingContainer = styled.div`
   );
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 auto 200px;
 `;
 
