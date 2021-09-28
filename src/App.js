@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Pricing from "./components/Pricing";
+import { useEffect, useState } from "react";
 
 const PricingContainer = styled.div`
   height: 100vh;
@@ -44,7 +45,7 @@ const SubDurationContainer = styled.div`
   align-items: center;
 `;
 
-const SubDuration = styled.span`
+const SubDurationBtn = styled.button`
   font-size: 15px;
   line-height: 17.66px;
   color: #1f2643;
@@ -62,15 +63,57 @@ const SmallForwardSlash = styled.div`
   /* margin: 0 20px; */
 `;
 
+const month = [
+  {
+    value: "8$",
+  },
+  {
+    value: "12$",
+  },
+  {
+    value: "90$",
+  },
+];
+
+const year = [
+  {
+    value: "12$",
+  },
+  {
+    value: "16$",
+  },
+  {
+    value: "97$",
+  },
+];
+
 function App() {
+  const [monthly, setMonthly] = useState("monthly");
+  const [data, setData] = useState(monthly === "monthly" ? month : year);
+
+  // const data = monthly ? month : year;
+
+  const handleClick = (e) => {
+    setMonthly(e.target.value);
+    console.log(e.target);
+  };
+
+  useEffect(() => {
+    setData(monthly === "monthly" ? month : year);
+  }, [monthly]);
+
   return (
     <>
       <PageHeaderComponent>
         <Title>Base plan</Title>
         <SubDurationContainer>
-          <SubDuration>Monthly</SubDuration>
+          <SubDurationBtn value="monthly" onClick={handleClick}>
+            Monthly
+          </SubDurationBtn>
           <SmallForwardSlash />
-          <SubDuration>Yearly</SubDuration>
+          <SubDurationBtn value="yearly" onClick={handleClick}>
+            Yearly
+          </SubDurationBtn>
         </SubDurationContainer>
       </PageHeaderComponent>
 
@@ -78,7 +121,7 @@ function App() {
         <Pricing
           headerText="Essential"
           descriptionText="Understand the true pulse of your organization with regular Check-ins and guided 1-on-1s, and show meaningful appreciation when it matters most using High Fives."
-          value="8€"
+          value={data[0].value}
           duration="per month"
           text="per employee"
           buttonText="Select Plan"
