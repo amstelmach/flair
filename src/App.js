@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Pricing from "./components/Pricing";
-// import "./App.css";
 import PageHeader from "./components/PageHeader";
 
 const PricingContainer = styled.div`
@@ -18,16 +17,9 @@ const PricingContainer = styled.div`
   margin: 0 auto 200px;
 `;
 
-// const PageHeaderA = styled.div`
-//   width: 100%;
-//   height: 200px;
-//   background-color: red;
-// `;
-
 function App() {
   return (
     <>
-      {/* <PageHeaderA /> */}
       <PageHeader pageTitle="Base plan" />
 
       <PricingContainer>
