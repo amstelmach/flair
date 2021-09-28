@@ -156,13 +156,10 @@ const ListContainerChecked = styled.div`
 display: flex;
 flex-direction: column;
 padding-left: 42px;
-/* padding-top: 35px; */
-/* padding-bottom: 50px; */
 padding-right: 42px;
 align-content: center;
 min-height: 0px;
 color:#1F2643;
-
 `;
 
 const ListItemCheckedElement = styled.span`
@@ -177,13 +174,10 @@ display: flex;
 flex-direction: column;
 min-height: 0px;
 padding-left: 42px;
-/* padding-top: 35px; */
-/* padding-bottom: 50px; */
 padding-right: 42px;
 align-content: center;
 color: #1F2643;
 font-size: 15px;
-
 `;
 
 const ListItemInfoElement = styled.span`
@@ -210,10 +204,11 @@ font-weight: 500;
 margin-left: 42px;
 margin-top: 30px;
 margin-bottom: 30px;
-/* margin-bottom: 44.4px; */
 cursor: pointer;
+&:hover {
+    background: linear-gradient(90deg, #0162c8, #55e7fc);
+}
 `;
-
 
 
 export default Pricing;
