@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Pricing from "./components/Pricing";
 import PageHeader from "./components/PageHeader";
-import { useState } from "react";
 
 const PricingContainer = styled.div`
   height: 100vh;
@@ -18,27 +17,16 @@ const PricingContainer = styled.div`
   margin: 0 auto 200px;
 `;
 
-const month = {
-  value: "8$",
-};
-
-const year = {
-  value: "90$",
-};
-
 function App() {
-  const [monthly, setMonthly] = useState(true);
-
-  const data = monthly ? month : year;
   return (
     <>
       <PageHeader pageTitle="Base plan" />
 
       <PricingContainer>
         <Pricing
-          headerText={data.headerText}
+          headerText="Essential"
           descriptionText="Understand the true pulse of your organization with regular Check-ins and guided 1-on-1s, and show meaningful appreciation when it matters most using High Fives."
-          value={data.value}
+          value="8€"
           duration="per month"
           text="per employee"
           buttonText="Select Plan"
