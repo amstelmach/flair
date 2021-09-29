@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Pricing from "./components/Pricing";
-import PageHeader from "./components/PageHeader";
+import { useState } from "react";
 
 const PricingContainer = styled.div`
   height: 100vh;
@@ -88,14 +88,25 @@ const year = [
 ];
 
 function App() {
+  const [monthly, setMonthly] = useState("monthly");
+
+  const handleClick = (e) => {
+    setMonthly(e.target.value);
+    console.log(e.target);
+  };
+
   return (
     <>
       <PageHeaderComponent>
         <Title>Base plan</Title>
         <SubDurationContainer>
-          <SubDurationBtn>Monthly</SubDurationBtn>
+          <SubDurationBtn value="monthly" onClick={handleClick}>
+            Monthly
+          </SubDurationBtn>
           <SmallForwardSlash />
-          <SubDurationBtn>Yearly</SubDurationBtn>
+          <SubDurationBtn value="yearly" onClick={handleClick}>
+            Yearly
+          </SubDurationBtn>
         </SubDurationContainer>
       </PageHeaderComponent>
 
