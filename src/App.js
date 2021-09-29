@@ -63,6 +63,30 @@ const SmallForwardSlash = styled.div`
   /* margin: 0 20px; */
 `;
 
+const month = [
+  {
+    value: "8€",
+  },
+  {
+    value: "14€",
+  },
+  {
+    value: "20€",
+  },
+];
+
+const year = [
+  {
+    value: "96€",
+  },
+  {
+    value: "168€",
+  },
+  {
+    value: "240€",
+  },
+];
+
 function App() {
   return (
     <>
