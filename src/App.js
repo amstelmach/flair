@@ -52,6 +52,10 @@ const SubDurationBtn = styled.button`
   font-weight: 400;
   margin-left: 10px;
   margin-right: 10px;
+  border: none;
+  background-color: transparent;
+  font-family: "Poppins";
+  cursor: pointer;
 `;
 
 const SmallForwardSlash = styled.div`
@@ -99,7 +103,7 @@ function App() {
 
   const handleClick = (e) => {
     setMonthly(e.target.value);
-    console.log(e.target);
+    // console.log(e.target);
   };
 
   useEffect(() => {
