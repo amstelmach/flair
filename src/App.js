@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Pricing from "./components/Pricing";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const PricingContainer = styled.div`
   height: 100vh;
@@ -89,11 +89,16 @@ const year = [
 
 function App() {
   const [monthly, setMonthly] = useState("monthly");
+  const [data, setData] = useState(monthly === "monthly" ? month : year);
 
   const handleClick = (e) => {
     setMonthly(e.target.value);
     console.log(e.target);
   };
+
+  useEffect(() => {
+    setData(monthly === "monthly" ? month : year);
+  }, [monthly]);
 
   return (
     <>
@@ -114,7 +119,7 @@ function App() {
         <Pricing
           headerText="Essential"
           descriptionText="Understand the true pulse of your organization with regular Check-ins and guided 1-on-1s, and show meaningful appreciation when it matters most using High Fives."
-          value="8€"
+          value={data[0].value}
           duration="per month"
           text="per employee"
           buttonText="Select Plan"
@@ -124,7 +129,7 @@ function App() {
         <Pricing
           headerText="Growth"
           descriptionText="Understand the true pulse of your organization with regular Check-ins and guided 1-on-1s, and show meaningful appreciation when it matters most using High Fives."
-          value="14€"
+          value={data[1].value}
           duration="per month"
           text="per employee"
           buttonText="Select Plan"
@@ -141,7 +146,7 @@ function App() {
         <Pricing
           headerText="Performance"
           descriptionText="Understand the true pulse of your organization with regular Check-ins and guided 1-on-1s, and show meaningful appreciation when it matters most using High Fives."
-          value="20€"
+          value={data[2].value}
           duration="per month"
           text="per employee"
           buttonText="Select Plan"
