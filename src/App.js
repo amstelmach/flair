@@ -45,7 +45,7 @@ const SubDurationContainer = styled.div`
   align-items: center;
 `;
 
-const SubDuration = styled.span`
+const SubDurationBtn = styled.button`
   font-size: 15px;
   line-height: 17.66px;
   color: #1f2643;
@@ -69,9 +69,9 @@ function App() {
       <PageHeaderComponent>
         <Title>Base plan</Title>
         <SubDurationContainer>
-          <SubDuration>Monthly</SubDuration>
+          <SubDurationBtn>Monthly</SubDurationBtn>
           <SmallForwardSlash />
-          <SubDuration>Yearly</SubDuration>
+          <SubDurationBtn>Yearly</SubDurationBtn>
         </SubDurationContainer>
       </PageHeaderComponent>
 
