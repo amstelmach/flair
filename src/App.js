@@ -73,6 +73,9 @@ const month = [
   {
     value: "20€",
   },
+  {
+    duration: "per month",
+  },
 ];
 
 const year = [
@@ -84,6 +87,9 @@ const year = [
   },
   {
     value: "240€",
+  },
+  {
+    duration: "per year",
   },
 ];
 
@@ -120,7 +126,7 @@ function App() {
           headerText="Essential"
           descriptionText="Understand the true pulse of your organization with regular Check-ins and guided 1-on-1s, and show meaningful appreciation when it matters most using High Fives."
           value={data[0].value}
-          duration="per month"
+          duration={data[3].duration}
           text="per employee"
           buttonText="Select Plan"
           list={["Core HR", "Payroll", "Recruiting", "Employee HUB"]}
@@ -130,7 +136,7 @@ function App() {
           headerText="Growth"
           descriptionText="Understand the true pulse of your organization with regular Check-ins and guided 1-on-1s, and show meaningful appreciation when it matters most using High Fives."
           value={data[1].value}
-          duration="per month"
+          duration={data[3].duration}
           text="per employee"
           buttonText="Select Plan"
           info={[
@@ -147,7 +153,7 @@ function App() {
           headerText="Performance"
           descriptionText="Understand the true pulse of your organization with regular Check-ins and guided 1-on-1s, and show meaningful appreciation when it matters most using High Fives."
           value={data[2].value}
-          duration="per month"
+          duration={data[3].duration}
           text="per employee"
           buttonText="Select Plan"
           info={[
