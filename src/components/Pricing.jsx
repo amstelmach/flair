@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ReactHover, { Trigger, Hover} from 'react-hover';
 import TriggerComponent from "./TriggerComponent";
 import HoverComponent from "./HoverComponent";
+import oval from '../images/Oval.jpg';
 
 
 const Display = {
@@ -31,7 +32,7 @@ const Pricing = ({headerText, descriptionText, value, duration, text, buttonText
                 {list.map((listItem, index) => {
                     return (
                         <ListItemCheckedElement key={index}>
-                            <img alt='icon' src={"images/Oval.jpg"} style={{marginRight: '12px'}} />
+                            <img alt='icon' src={oval} style={{marginRight: '12px'}} />
                             {listItem} 
                         </ListItemCheckedElement>
                     )
