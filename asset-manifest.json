@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/flair/static/css/main.0967462b.chunk.css",
-    "main.js": "/flair/static/js/main.32232a90.chunk.js",
-    "main.js.map": "/flair/static/js/main.32232a90.chunk.js.map",
+    "main.js": "/flair/static/js/main.3e3f2505.chunk.js",
+    "main.js.map": "/flair/static/js/main.3e3f2505.chunk.js.map",
     "runtime-main.js": "/flair/static/js/runtime-main.5109c575.js",
     "runtime-main.js.map": "/flair/static/js/runtime-main.5109c575.js.map",
     "static/js/2.63761ce5.chunk.js": "/flair/static/js/2.63761ce5.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.5109c575.js",
     "static/js/2.63761ce5.chunk.js",
     "static/css/main.0967462b.chunk.css",
-    "static/js/main.32232a90.chunk.js"
+    "static/js/main.3e3f2505.chunk.js"
   ]
 }
