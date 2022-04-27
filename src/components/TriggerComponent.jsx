@@ -3,7 +3,7 @@
 const TriggerComponent = () => {
     return (
         <div >
-            <img style={{cursor: 'pointer'}}src={"images/Info.jpg"} />
+            <img alt='additional info'style={{cursor: 'pointer'}}src={"images/Info.jpg"} />
         </div>
     )
 }
